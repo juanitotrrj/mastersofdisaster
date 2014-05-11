@@ -1,0 +1,60 @@
+<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    x:Class="Automated_Rescue_Response_Management.RespondentPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Image Margin="10,10,0,10" Source="/background.png" Stretch="Fill"/>
+            <Image Margin="35,302,297,349" Source="/police.jpg" Stretch="Fill"/>
+            <Image Margin="171,304,162,349" Source="/ambulance.jpg" Stretch="Fill"/>
+            <Image Margin="305,302,28,349" Source="/fire.jpg" Stretch="Fill" RenderTransformOrigin="2.044,0.015"/>
+            <TextBlock HorizontalAlignment="Left" Margin="92,129,0,0" TextWrapping="Wrap" Text="Please Select a Respondent" VerticalAlignment="Top" FontSize="24"/>
+            <TextBlock HorizontalAlignment="Left" Margin="146,0,0,0" TextWrapping="Wrap" Text="ARM" VerticalAlignment="Top" FontSize="72"/>
+            <Button Content="Police" HorizontalAlignment="Left" Margin="30,379,0,0" VerticalAlignment="Top" Width="129" Background="#FF040404" FontSize="16">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Tap">
+                        <ec:NavigateToPageAction TargetPage="/CameraPage.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Content="Ambulance" HorizontalAlignment="Left" Margin="159,379,0,0" VerticalAlignment="Top" Width="129" Background="#FF040404" FontSize="16">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Tap">
+                        <ec:NavigateToPageAction TargetPage="/CameraPage.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+            <Button Content="Fire" HorizontalAlignment="Left" Margin="299,379,0,0" VerticalAlignment="Top" Width="129" Background="#FF040404" FontSize="16">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="Tap">
+                        <ec:NavigateToPageAction TargetPage="/CameraPage.xaml"/>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </Button>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
