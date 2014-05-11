@@ -1,0 +1,27 @@
+.topnav {
+	margin-bottom: 0;
+}
+.nomargin {
+	padding: 0;
+}
+html,body {
+	height: 100%;
+}
+#map {
+	height: 100%;
+}
+.my-row {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+.container-fluid {
+	/* Firefox */
+	height: -moz-calc(100% - 50px);
+	/* WebKit */
+	height: -webkit-calc(100% - 50px);
+	/* Opera */
+	height: -o-calc(100% - 50px);
+	/* Standard */
+	height: calc(100% - 50px);
+}

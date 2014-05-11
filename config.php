@@ -1,15 +1,16 @@
 <?php
-if (!defined('BASEPATH')) define('BASEPATH', dirname(dirname(__FILE__)));
+if (!defined('BASEPATH')) define('BASEPATH', dirname(__FILE__));
+error_reporting(E_ALL);
 
 // Database
-$db['host'] = "";
-$db['un'] = "";
-$db['ps'] = "";
-$db['ds'] = "";
+$db['host'] = "localhost";
+$db['un'] = "root";
+$db['ps'] = "xR9y2NeV1VHkIJi";
+$db['ds'] = "hack";
 
 // SMTP
-$smtp['host'] = "";
-$smtp['un'] = "";
+$smtp['host'] = "smtp.mail.com";
+$smtp['un'] = "mail@domain.com";
 $smtp['p'] = 25;
 
 // Timezone

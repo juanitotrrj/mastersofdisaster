@@ -1,5 +1,5 @@
 <?php
-if (!defined('BASEPATH')) define('BASEPATH', dirname(dirname(__FILE__)));
+if (!defined('BASEPATH')) define('BASEPATH', dirname(__FILE__));
 require_once(BASEPATH . "/database.php");
 date_default_timezone_set($tz['timezone']);
 
@@ -12,5 +12,6 @@ fwrite($fh, $image);
 fclose($fh);
 
 // Record the image
-$sql_statement = "INSERT INTO images () VALUES()";
+$sql_statement = "INSERT INTO disaster (desc,longitude,latitude,date_logged) VALUES()";
 
+// 

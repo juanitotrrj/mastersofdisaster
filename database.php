@@ -1,10 +1,12 @@
 <?php
-if (!defined('BASEPATH')) define('BASEPATH', dirname(dirname(__FILE__)));
+if (!defined('BASEPATH')) define('BASEPATH', dirname(__FILE__));
 require_once(BASEPATH . "/config.php");
 
-if (($db_conn = mssql_connect($db['host'], $db['un'], $db['ps'])) == false) {
-	die("Unable to connect to database.");
-	exit;
+try {
+	// $dbh = new PDO("sqlsrv:Server=" . $db['host'] . ";Database=" . $db['ds'], $db['un'], $db['ps']);
+	$dbh = new PDO("mysql:host=" . $db['host'] . ";dbname=" . $db['ds'], $db['un'], $db['ps']);
+	// echo "mysql:Server=" . $db['host'] . ";Database=" . $db['ds'] . PHP_EOL;
+	// $dbh = mssql_pconnect($db['host'], $db['un'], $db['ps']);
+} catch (Exception $e) {
+	die($e->getMessage());
 }
-
-mssql_select_db("mastersofdisaster", $db_conn);
